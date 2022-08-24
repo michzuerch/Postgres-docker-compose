@@ -21,9 +21,3 @@ services:
       # of `/var/lib/postgresql/data/`, automatically the change will appear in `db-data`.
       # You don't need to create the `db-data` folder. Docker Compose will do it for you.
       - ./db-data/:/var/lib/postgresql/data/
-  checkinboard-server:
-    image: 'checkinboard-server'
-    ports:
-      - ${HTTP_PORT}:${HTTP_PORT}
-    env_file:
-      - .env
